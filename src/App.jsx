@@ -1,5 +1,6 @@
 import './App.css';
 import Score from './components/Score';
+import Game from './components/Game';
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
         <h1>Pokemon Memory Game</h1>
       </header>
       <Score />
+      <Game />
     </>
   );
 }
