@@ -1,9 +1,7 @@
+/* eslint-disable react/prop-types */
 import '../styles/Score.css';
-import { useState } from 'react';
 
-function Score() {
-  const [currentScore, setCurrentScore] = useState(0);
-  const [bestScore, setBestScore] = useState(0);
+function Score({ currentScore, bestScore }) {
   return (
     <section className="score">
       <p>Current score: {currentScore}</p>

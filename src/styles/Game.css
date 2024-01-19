@@ -17,7 +17,7 @@ section.loading {
   color: #FFF;
 }
 
-div.card {
+button.card {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -28,9 +28,10 @@ div.card {
   border-radius: 12px;
   background-color: #FFF;
   box-shadow: 4px 4px 13px 0px #333;
+  font-family: inherit;
 }
 
-div.card .back {
+button.card .back {
   border: 0;
   margin: 1px;
   background-image: url('../assets/images/card-back.png');
@@ -38,10 +39,10 @@ div.card .back {
   box-shadow: 4px 4px 13px 0px #333;
 }
 
-div.card:hover {
+button.card:hover {
   cursor: pointer;
 }
 
-div.card>img {
+button.card>img {
   width: 150px;
 }
