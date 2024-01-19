@@ -1,14 +1,13 @@
+/* eslint-disable react/prop-types */
 import '../styles/Game.css';
 
 import useFetchData from '../hooks/data';
 
-function Game() {
+function Game({ gameover }) {
   const { pokeData, fetchError } = useFetchData();
-
   if (fetchError) {
     return <section className="card-container loading">Error: {fetchError}</section>;
   }
-
   if (!pokeData || pokeData.length === 0) {
     return <section className="card-container loading">Loading</section>;
   }
