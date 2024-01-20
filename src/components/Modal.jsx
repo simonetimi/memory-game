@@ -5,7 +5,6 @@ import { useRef, useEffect } from 'react';
 
 function Modal({ isOpen, isWon, functionOnClose }) {
   const modalRef = useRef(null);
-
   useEffect(() => {
     if (isOpen) {
       modalRef.current?.showModal();
@@ -23,10 +22,12 @@ function Modal({ isOpen, isWon, functionOnClose }) {
 
   return (
     <dialog ref={modalRef}>
-      <p>{textContent}</p>
-      <button type="button" onClick={functionOnClose}>
-        Play again
-      </button>
+      <div>
+        <p>{textContent}</p>
+        <button type="button" onClick={functionOnClose}>
+          Play again
+        </button>
+      </div>
     </dialog>
   );
 }
