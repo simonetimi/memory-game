@@ -39,7 +39,8 @@ function Game({ onGameOver, bestScore, setBestScore }) {
   function handleOnClick(pokemon) {
     const updatedClickedCards = new Set(clickedCards);
     if (updatedClickedCards.has(pokemon)) {
-      setBestScore(Math.max(currentScore, bestScore));
+      const newScore = Math.max(currentScore, bestScore);
+      setBestScore(newScore);
       setCurrentScore(0);
       setClickedCards(new Set());
       // set isWon to false, pass it to the modal and opens it
@@ -49,9 +50,10 @@ function Game({ onGameOver, bestScore, setBestScore }) {
     }
     updatedClickedCards.add(pokemon);
     setClickedCards(updatedClickedCards);
-    setCurrentScore(currentScore + 1);
+    const newScore = currentScore + 1;
+    setCurrentScore(newScore);
     if (updatedClickedCards.size === 10) {
-      setBestScore(currentScore);
+      setBestScore(newScore);
       // set isWon to true, pass it to the modal and opens it
       setIsWon(true);
       openDialog();
