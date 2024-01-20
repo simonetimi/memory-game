@@ -4,7 +4,7 @@ section.card-container {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  margin: 0.8rem 1.4rem 1.4rem 1.4rem;
+  margin: 0.8rem 1.4rem 0.2rem 1.4rem;
   gap: 1.2rem;
   overflow: scroll;
 }
@@ -22,8 +22,8 @@ button.card {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 160px;
-  height: 222px;
+  width: 150px;
+  height: 210px;
   border: 1px solid #FFF;
   border-radius: 12px;
   background-color: #FFF;
@@ -31,16 +31,14 @@ button.card {
   font-family: inherit;
 }
 
-button.card .back {
-  border: 0;
-  margin: 1px;
-  background-image: url('../assets/images/card-back.png');
-  background-size: cover;
-  box-shadow: 4px 4px 13px 0px #333;
-}
-
 button.card:hover {
   cursor: pointer;
+  transform: scale(1.05);
+  transition: all .4s;
+}
+
+button.card:active {
+  transform: translateY(3px);
 }
 
 button.card>img {
