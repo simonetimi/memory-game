@@ -1,7 +1,7 @@
 dialog {
   border: 0;
-  width: 15vw;
-  height: 15vh;
+  width: 200px;
+  height: 120px;
   border-radius: 12px;
   box-shadow: 4px 4px 13px 0px #333;
   flex-direction: column;
